@@ -2,6 +2,7 @@ var app = new Vue({
 	el: "#app",
 	data: {
 		title: "Aditya's Birthday in:",
+		date: "",
 		bod: "",
 		days: "",
 		hours: "",
@@ -15,19 +16,15 @@ var app = new Vue({
 			const hour = minute * 60;
 			const day = hour * 24;
 
+			let date = new Date();
+			this.date = date.toDateString();
+
 			let that = this;
-
-			let current = new Date().getTime();
-			let bod = new Date("21 Juni " + new Date().getFullYear()).getTime();
-
-			let year =
-				(bod - current) / day < 0
-					? new Date().getFullYear() + 1
-					: new Date().getFullYear();
-
-			let nextBod = "21 Juni " + year;
-			that.bod = nextBod;
-			let countDown = new Date(nextBod).getTime();
+			let current = date.getTime();
+			let thisYear = date.getFullYear();
+			let bod = new Date("21 Juni " + thisYear).getTime();
+			let year = (bod - current) / day < 0 ? thisYear + 1 : thisYear;
+			let countDown = new Date("21 Juni " + year).getTime();
 
 			setInterval(function () {
 				let now = new Date().getTime();

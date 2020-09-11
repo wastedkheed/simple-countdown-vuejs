@@ -15,9 +15,19 @@ h1 {
 	font-weight: normal;
 }
 
+ul {
+	display: block;
+	list-style-type: disc;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 0px;
+}
+
 li {
 	display: inline-block;
-	font-size: 1.5em;
+	font-size: 1.25rem;
 	list-style-type: none;
 	padding: 1em;
 	text-transform: capitalize;
@@ -28,6 +38,44 @@ li span {
 	color: #eeeeee;
 	text-align: center;
 	display: block;
-	font-size: 4.5rem;
+	font-size: 3rem;
 	font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+	h1 {
+		font-size: 2rem;
+	}
+
+	li {
+		font-size: 1rem;
+		padding: 0.5em;
+	}
+
+	li span {
+		font-size: 2rem;
+	}
+
+	small {
+		font-size: 0.75rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	h1 {
+		font-size: 1.5rem;
+	}
+
+	li {
+		font-size: 0.75rem;
+		padding: 0.5em;
+	}
+
+	li span {
+		font-size: 1.5rem;
+	}
+
+	small {
+		font-size: 0.7rem;
+	}
 }
