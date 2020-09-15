@@ -2,7 +2,8 @@ var app = new Vue({
 	el: "#app",
 	data: {
 		title: "Aditya's Birthday in:",
-		date: "",
+		myDate: "",
+		utcDate: "",
 		bod: "",
 		days: "",
 		hours: "",
@@ -17,7 +18,12 @@ var app = new Vue({
 			const day = hour * 24;
 
 			let date = new Date();
-			this.date = date.toDateString();
+			this.myDate = new Date(
+				date.toLocaleDateString("en-US", {
+					timeZone: "Asia/Makassar",
+				})
+			).toDateString();
+			this.utcDate = new Date(date.toUTCString()).toDateString();
 
 			let that = this;
 			let current = date.getTime();
