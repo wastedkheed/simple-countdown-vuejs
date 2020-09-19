@@ -7,3 +7,4 @@ Simple birthday countdown using vue.js
 - [x] add vue.js cdn
 - [x] style with css
 - [x] logic time
+- [x] Deploy 🐱‍🏍
