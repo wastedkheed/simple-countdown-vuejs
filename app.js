@@ -23,7 +23,7 @@ var app = new Vue({
             timeZone: "Etc/UTC",
          });
          this.myDate = date.toLocaleString("en-US", {
-            timeZone: "Asia/Makassar",
+            timeZone: "Asia/Jakarta",
          });
          this.yourDate = date.toLocaleString();
 
