@@ -1,7 +1,7 @@
 var app = new Vue({
    el: "#app",
    data: {
-      title: "Aditya's Birthday in:",
+      title: "Steppa's Birthday in:",
       utcDate: "",
       myDate: "",
       yourDate: "",
